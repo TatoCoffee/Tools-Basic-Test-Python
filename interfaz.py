@@ -72,7 +72,7 @@ class App:
         hash_val = self.entry_passhash.get()
         dict_val = self.entry_passdict.get()
         self.result_scan.delete(1.0, tk.END)
-        self.result_scan.insert(tk.END, find_password_in_dict(hash_val, dict_val))
+        self.result_scan.insert(tk.END, str(find_password_in_dict(hash_val, dict_val)))
 
     def decimal_to_binary(self):
         decimal_val = int(self.entry_decimal.get())
